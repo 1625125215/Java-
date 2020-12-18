@@ -13,3 +13,6 @@ IDEA如果出现Error:(1, 10) java: 需要class, interface或enum
 然后再选择GBK
 再换回UTF-8
 就行了
+
+【三】、alt+insert在mac上的替代办法（构造）
+command+n
