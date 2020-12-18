@@ -16,3 +16,7 @@ IDEA如果出现Error:(1, 10) java: 需要class, interface或enum
 
 【三】、alt+insert在mac上的替代办法（构造）
 command+n
+
+【四】、Error:(16, 2) java: 解析时已到达文件结尾
+解决方法：
+       查看大括号是否匹配正确。
