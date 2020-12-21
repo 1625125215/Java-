@@ -20,3 +20,25 @@ command+n
 【四】、Error:(16, 2) java: 解析时已到达文件结尾
 解决方法：
        查看大括号是否匹配正确。
+
+【五】、原因: java.lang.ClassNotFoundException
+出现此类时，先考虑编码问题，其次尽量使用英语
+
+【】Java 方法中加void和不加void的 区别
+只要记住void即无返回值就OK了，如果不用void，那么这个地方一定是被一个其它的数据类型所替代，比如下面用的是String，当然也可能是int或者Boolean等等，那么此时我们下面就要有一个return返回值。
+package com.Thursday.one;
+public class Variable {
+	public static void speaker(){
+		System.out.println("你好");
+	}
+	public static String Talk(){
+		return "hello";
+	}
+	public static void main(String[] args) {
+		speaker();
+		Talk();
+		String aString = Talk();
+		System.out.println(aString);
+	}
+}
+
