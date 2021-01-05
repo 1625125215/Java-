@@ -205,3 +205,36 @@ Integer 的对象可以调用该类的方法，但是在拆箱之前不能进行
 
 【】即使在同一个包里，也要注意大小写，否则可能调用到其他包里的类
 【】idea自动补全返回值 快捷键ctrl+alt+v  
+
+【】parseInt（string，radix）能对string进行解析并返回数字。第一个参数是必须的，第二个参数是可选的，是基数。
+当第二个参数没给时默认是10进制。第二个参数的范围为：2-36.超出这个范围会返回NaN。但当为0或undefined或null时默认是10进制。
+两个参数的意思大概理解为：第一个参数是要进行转换的字符串，第二个参数是表示该字符串现在所处的进制数。
+例如：parseInt（“010”,2）,表示的是010是个2进制数，parseInt（“010”，8），表示010是个8进制数。
+且还要注意parseInt返回的结果，之前我一直有个误区就是认为parseInt返回的结果就是NaN或第二个参数所指的那个进制来表示结果，
+但后来弄清楚parseInt返回的结果仅会是10进制来表示该string的转换结果或者是NaN。
+还要注意一个点，parseInt是针对字符串进行转换的，若传入的第一个参数并非字符串，会隐式的把该参数转换成字符串后再进行转换。
+如果没有给第二个参数，parseInt会根据字符串的第一个字符来自行决定基数.若是0x则默认16进制，若为0则默认8进制。
+若都不是则默认10进制，最后结果都以10进制输出。
+
+【】1.parse()是SimpleDateFomat里面的方法
+parseInt()或parsefloat()顾名思义 比如说parseInt()就是把String类型转化为int类型。
+如 String a= “123”;
+int b = Integer.parseInt(a);
+这样b就等于123了。
+
+2.ValueOf()方法比如说 Integer.valueOf() 是把String类型转化为Integer类型
+(注意：是Integer类型，而不是int类型，int类型是表示数字的简单类型，Integer类型是一个引用的复杂类型)
+如：
+String a= “123”;
+Integer c =Integer.valueOf(a);
+//Integer类型可以用intValue方法转化为int类型
+int b =c.intValue();
+这时候这个b就等于123了
+
+3.toString()可以把一个引用类型转化为String字符串类型。
+下面举个例子与2相反，把Integer转化为String类型：
+Integer a = new Integer(123);
+String b =a.toString();
+这时候b就是 “123” 了
+
+ 
