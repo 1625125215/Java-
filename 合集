@@ -264,9 +264,8 @@ ratio = denom == 0 ? 0 : num / denom;
 表达式的值赋给变量ratio。下面的程序说明了？运算符，该程序得到一个变量的绝对值。
 -----------------------------------------------------------
  自从JDK最初版本发布起，我们就可以使用java.util.Random类产生随机数了。在JDK1.2中，Random类有了一个名为nextInt()的方法：
-
 public int nextInt(int n)
 var rand = new Random();
 rand.nextInt(200);//返回一个0 ≤ n ≤200的随机数。
-
 给定一个参数n，nextInt(n)将返回一个大于等于0小于n的随机数，即：0 <= nextInt(n) < n。
+里面可以加上bound参数，表示个数
