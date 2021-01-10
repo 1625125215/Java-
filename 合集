@@ -276,3 +276,46 @@ rand.nextInt(200);//返回一个0 ≤ n ≤200的随机数。
   JAVA为了组织这个类组织得比较方便，它提供了一个最根上的类，相当于所有的类都是从这个类继承，
   这个类就叫Object。所以Object类是所有JAVA类的根基类，是所有JAVA类的老祖宗。
   所有的类，不管是谁，都是从它继承下来的。
+-----------------------------------------------------------  
+1. keySet（）
+public static void main(String[] args) {
+	Map<String, String> map = new HashMap<String, String>();
+	map.put("01", "qwe");
+	map.put("02", "asd");
+	map.put("03", "zxc");
+	// 先获取map集合的所有键的set集合，即为map中所有key值的集合
+	Set<String> keySet = map.keySet();
+	// 有了set集合，就可以获取其迭代器
+	Iterator<String> it = keySet.iterator();
+	while (it.hasNext()) {
+		String key = it.next();
+		// 有了键可以通过map集合的get方法获取其对应的值
+		String value = map.get(key);
+		// 获得key和value值
+		System.out.println("key:" + key + "-->value:" + value);
+	}
+
+keySet（）返回的是map对象的key值的set集合
+-----------------------------------------------------------
+2. entrySet（）
+public static void main(String[] args) {
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("01", "qwe");
+		map.put("02", "asd");
+		map.put("03", "zxc");
+		// 通过entrySet()方法将map集合中的映射关系取出（这个关系就是Map.Entry类型）
+		Set<Map.Entry<String, String>> entrySet = map.entrySet();
+		// 将关系集合entryset进行迭代，存放到迭代器中
+		Iterator<Map.Entry<String, String>> it2 = entrySet.iterator();
+		while (it2.hasNext()) {
+			// 获取Map.Entry关系对象me
+			Map.Entry<String, String> me = it2.next();
+			// 通过关系对像获取key
+			String key2 = me.getKey();
+			// 通过关系对像获取value
+			String value2 = me.getValue();
+			System.out.println("key:" + key2 + "-->value:" + value2);
+		}
+	}
+
+entrySet()返回映射所包含的映射关系的Set集合（一个关系就是一个键-值对），就是把(key-value)作为一个整体一对一对地存放到Set集合当中的。
