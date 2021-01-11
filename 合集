@@ -319,3 +319,27 @@ public static void main(String[] args) {
 	}
 
 entrySet()返回映射所包含的映射关系的Set集合（一个关系就是一个键-值对），就是把(key-value)作为一个整体一对一对地存放到Set集合当中的。
+
+-----------------------------------------------------------
+
+charAt() 方法用于返回指定索引处的字符。索引范围为从 0 到 length() - 1。
+
+public char charAt(int index)
+参数
+index -- 字符的索引。
+
+返回值
+返回指定索引处的字符。
+
+实例
+public class Test {
+
+    public static void main(String args[]) {
+        String s = "www.runoob.com";
+        char result = s.charAt(8);
+        System.out.println(result);
+    }
+}
+以上程序执行结果为：
+
+o
