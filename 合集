@@ -343,3 +343,7 @@ public class Test {
 以上程序执行结果为：
 
 o
+-----------------------------------------------------------
+unhandled exception报错的时候
+按住alt+enter抛出异常throws xxx
+
